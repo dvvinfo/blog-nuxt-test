@@ -13,7 +13,6 @@ const { id } = useRoute().params;
 const url = `https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work/posts/${id}`;
 const post = ref<Post[]>([]);
 
-// const { data: post } = await useFetch(url);
 const fetchPost = async (): Promise<Post[]> => {
   const response = await axios.get<Post[]>(url);
   return response.data;

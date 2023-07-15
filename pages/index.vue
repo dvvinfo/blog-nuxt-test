@@ -83,20 +83,20 @@ onMounted(async () => {
 });
 
 // Функция для перехода на определенную страницу
-const goToPage = (pageNumber: number): void => {
+const goToPage = (pageNumber: number) => {
   if (pageNumber >= 1 && pageNumber <= totalPages.value) {
     currentPage.value = pageNumber;
   }
 };
 
 // Функция для перехода на следующую страницу
-const goToNextPage = (): void => {
+const goToNextPage = () => {
   if (currentPage.value < totalPages.value) {
     currentPage.value += 1;
   }
 };
 // Функция для перехода на предыдущую страницу
-const goToPrevPage = (): void => {
+const goToPrevPage = () => {
   if (currentPage.value > 1) {
     currentPage.value -= 1;
   }
